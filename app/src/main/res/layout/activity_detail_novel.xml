@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/detail_novel"
+    android:padding="@dimen/activity_vertical_margin"
+    android:orientation="horizontal"
+    tools:context=".DetailNovelActivity">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/img_item_photo"
+        android:layout_width="200dp"
+        android:layout_height= "200dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+        tools:src="@android:color/darker_gray"/>
+
+    <TextView
+        android:id="@+id/tv_item_nama"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        tools:text="Nama Pengarang"
+        android:layout_marginTop="250dp"
+        android:gravity="center"
+        android:layout_marginBottom="8dp"
+        android:layout_marginRight="@dimen/activity_vertical_margin"
+        android:layout_marginLeft="@dimen/activity_vertical_margin"/>
+    <TextView
+        android:layout_below="@id/tv_item_nama"
+        android:gravity="center"
+        android:id="@+id/tv_item_judul"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:text="Judul"
+        android:layout_marginBottom="8dp"
+        android:layout_marginRight="@dimen/activity_vertical_margin"
+        android:layout_marginLeft="@dimen/activity_vertical_margin"/>
+
+
+    <TextView
+        android:layout_below="@id/tv_item_judul"
+        android:id="@+id/tv_item_deskripsi"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        tools:text="Deskripsi"
+        android:layout_marginTop="16dp"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        app:layout_constraintTop_toBottomOf="@+id/img_item_photo"
+        android:layout_marginBottom="22dp"
+        android:layout_marginRight="@dimen/activity_vertical_margin"
+        android:layout_marginLeft="@dimen/activity_vertical_margin"
+        tools:layout_editor_absoluteX="14dp"
+        style="@style/TextSpec.Field"/>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_item_deskripsi"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:layout_marginBottom="@dimen/activity_vertical_margin">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp">
+            <TextView
+                android:layout_marginLeft="12dp"
+                style="@style/TextSpec.Field"
+                android:text="@string/genre"/>
+            <TextView
+                android:id="@+id/tv_item_genre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/genre"
+                android:layout_marginBottom="8dp"
+                android:layout_marginRight="@dimen/activity_vertical_margin"
+                android:layout_marginLeft="@dimen/activity_vertical_margin"/>
+        </TableRow>
+    </TableLayout>
+
+</RelativeLayout>
